@@ -1,0 +1,209 @@
+#include<stdio.h>
+main()
+{ 
+int num_1,num_2;
+printf("Dame el numero 1 ");
+scanf("%d",&num_1);
+printf("Dame el segundo numero");
+scanf("%d",&num_2);
+       while (num_1!=0 or num_2!=0)
+       {    num_1=num_1-1;
+            num_2=num_2-1;
+        }
+        if(num_1==0)
+        printf("El numero mas grande es  ");
+        else 
+        printf("El numero mas grande es ");
+}
+
+/* se corrio el programa pero no funciono ya que hubo un problema de sintaxis
+se eliminó el ; de la sección n num_2=num_2-1;
+
+*/ 
+
+#include<stdio.h>
+main()
+{ 
+int num_1,num_2;
+printf("Dame el numero 1 ");
+scanf("%d",&num_1);
+printf("Dame el segundo numero");
+scanf("%d",&num_2);
+       while (num_1!=0 or num_2!=0)
+       {    num_1=num_1-1;
+            num_2=num_2-1
+        }
+        if(num_1==0)
+        printf("El numero mas grande es  ");
+        else 
+        printf("El numero mas grande es ");
+}
+
+// el comando "or" no existe para el lenguaje C por lo que se cambio por "||" que significan o 
+
+#include<stdio.h>
+main()
+{ 
+int num_1,num_2;
+printf("Dame el numero 1 ");
+scanf("%d",&num_1);
+printf("Dame el segundo numero");
+scanf("%d",&num_2);
+       	while (num_1!=0 || num_2!=0) {    
+		num_1=(num_1)-1;
+        num_2=(num_2)-1;
+        }
+        if(num_1==0)
+        printf("El numero mas grande es  ");
+        else 
+        printf("El numero mas grande es ");
+}
+
+/* Se corrió el programa pero seguía sin funcionar. Por lo que cheque parte por parte y comprobé que 
+ el programa si guardaba los valores en las variables de num_1 y num_2 pero había un problema en la condición WHILE 
+así que cambien || por el &&  y así logre establecer que si una  condición llegaba a ser falsa es decir que se volvia cero salia del ciclo
+ */
+
+#include <stdio.h>
+main() {    
+
+int digito1,digito2,s,t;
+printf("Dame el numero 1 ");
+scanf("%d",&digito1);
+printf("Dame el segundo numero");
+scanf("%d",&digito2);
+s=digito1;
+t=digito2;
+while (digito1>0 && digito2>0) {
+printf("\n\t1-----%d\n",digito1);
+printf("\t\t\t\t2-----%d\n",digito2);
+digito1=digito1-1;
+digito2=digito2-1;
+}
+	if(digito1==0)
+	printf("\n\t\tEl menor es el %d",s);
+	else
+	printf("\n\t\tEl menor es el es el %d",t);
+} 
+
+/* Ya funciona el programa pero falta establcer que si el usuario 
+daba dos números iguales entonces el programa indicara que eran iguales 
+se elimino el printf para que no aparezca la operación en pantalla
+*/
+#include <stdio.h>
+main() {    
+
+int digito1,digito2,s,t;
+printf("Dame el numero 1 ");
+scanf("%d",&digito1);
+printf("Dame el segundo numero");
+scanf("%d",&digito2);
+s=digito1;
+t=digito2;
+if (digito1==digito2)
+printf("Los numeros son iguales");
+else {
+
+		while (digito1>0 && digito2>0) {
+			digito1=digito1-1;
+			digito2=digito2-1;
+		}
+			if(digito1==0)
+				printf("\n\t\tEl menor es el %d",s);
+			else
+				printf("\n\t\tEl menor es el es el %d",t);
+	}
+} 
+
+/* Después me dí cuenta que este programa podría servir para las tres finalidades: saber si un número es mayor o 
+menor que otro o si ambos número son iguales solo que tenia que modificar los comandos printf y agregar otro if que
+contuviera al if ya establecido. La función de comparar un número contra ortro número no existe porque la regla dice que 
+solo se puede comparar contra cero por lo que elimine la función
+*/
+
+#include <stdio.h>
+main() {    
+
+int digito1,digito2,s,t;
+printf("Dame el primer numero:\n");
+scanf("%d",&digito1);
+printf("Dame el segundo numero:\n");
+scanf("%d",&digito2);
+s=digito1;
+t=digito2;
+
+		while (digito1>0 && digito2>0) {
+			digito1=digito1-1;
+			digito2=digito2-1;
+		}
+		if(digito1==0 && digito2==0)
+		printf("\n\t\tEl primer numero es igual al segundo numero");
+		else{
+		
+				if(digito1==0){
+	
+				printf("\n\t\tEl numero menor es  %d",s);
+				printf("\n\t\tEl numero mayor es %d",t);
+		    	} 	
+				else{
+			
+				printf("\n\t\tEl menor es el es el %d",t);
+				printf("\n\t\tEl numero mayor es %d",s);
+	    		}
+	    }
+	
+} 
+
+/* como se define que las variables son naturales entonces si cualquier de los dos números es 0 no se podrá decrementar 
+en uno ya que no se puede operar con números negativos por lo que se puso un if al principio que tomara estas características. 
+*/
+
+#include <stdio.h>
+int main() {    
+int digito1,digito2,s,t;
+printf("Dame el primer numero:\n");
+scanf("%d",&digito1);
+printf("Dame el segundo numero:\n");
+scanf("%d",&digito2);
+s=digito1;
+t=digito2;
+	if (digito1==0){
+	
+			if (digito2==0)
+			printf("El primer numero es igual al segundo numero");
+			else {
+			
+			printf("\n\t\tEl numero menor es %d",digito1);
+			printf("\n\t\tEl numero mayor es %d",digito2);
+			}
+	}
+	else {
+			if(digito2==0){
+			printf("\n\t\tEl numero menor es %d",digito2);
+			printf("\n\t\tEl numero mayor es %d",digito1);
+			}
+		}
+		if(digito1!=0 && digito2!=0){
+				
+		while (digito1!=0 && digito2!=0) {
+			digito1=digito1-1;
+			digito2=digito2-1;
+		}
+		if(digito1==0 && digito2==0)
+		printf("\n\t\tEl primer numero es igual al segundo numero");
+		else{
+		
+				if(digito1==0){
+	
+				printf("\n\t\tEl numero menor es  %d",s);
+				printf("\n\t\tEl numero mayor es %d",t);
+		    	} 	
+				else{
+			
+				printf("\n\t\tEl menor es el es el %d",t);
+				printf("\n\t\tEl numero mayor es %d",s);
+	    		}
+	    }
+		}
+} 
+ 
